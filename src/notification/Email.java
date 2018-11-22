@@ -2,10 +2,10 @@ package notification;
 
 import order.Order;
 
-public class Email {
+public class Email implements Observer{
 
-    public void updateOrderStatus(Order order) {
+    @Override
+    public void update(Order order) {
         System.out.println("E-mail - order number: " + order.getOrderNumber() + " status: " + order.getOrderStatus());
     }
-
 }
